@@ -15,7 +15,7 @@ def clear():
         _ = system('clear')
 
 
-def dialog(character, text, loops, animdelay):
+def dialog(character: object, text: object, loops: object, animdelay: object) -> object:
     for x in range(loops):
         if character == "detective":
             clear()
@@ -77,5 +77,9 @@ clear()
 enemyname = input("a masked stranger come up to you. What is his name?")
 dialog("masked", "yo whats up mr detective man i need some detective crap done for me my dude", 5, 0.25)
 dialog("detective", "oh man oh jeez ok sure what will i get in return", 6, 0.15)
-dialog("masked", "you will get a magical artifact i totally didn't imbue with a curse", 5, 0.2.5)
+dialog("masked", "you will get a magical artifact i totally didn't imbue with a curse", 5, 0.25)
 dialog("detective", "seems legit", 2, 0.2)
+dialog("masked", "someone broke in to my house. who the heck did it?", 5, 0.25)
+dialog("detective", "who are the suspects?", 3, 0.15)
+dialog("masked", "Casey, who is my dog, Mrs. Greene, who is my cranky old neighbor, and Carson, who is my ex best friend", 12, 0.25)
+dialog("detective", "cool beans", 2, 0.2)
