@@ -3,7 +3,9 @@
     <words>
       <w>animdelay</w>
       <w>enemyname</w>
+      <w>findline</w>
       <w>inputyn</w>
+      <w>linenum</w>
       <w>saveall</w>
       <w>savefile</w>
       <w>sdescision</w>

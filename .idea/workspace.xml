@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1064d81c-8410-4a83-8e25-a35ca600806d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/ihear.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/ihear.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/detective.py" beforeDir="false" afterPath="$PROJECT_DIR$/detective.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,8 +16,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/detective.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="3" column="11" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="11" />
+            <state relative-caret-position="268">
+              <caret line="138" column="56" selection-start-line="138" selection-start-column="56" selection-end-line="138" selection-end-column="56" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -40,7 +44,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1357" />
@@ -158,8 +162,11 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/detective.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="3" column="11" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="11" />
+        <state relative-caret-position="268">
+          <caret line="138" column="56" selection-start-line="138" selection-start-column="56" selection-end-line="138" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
