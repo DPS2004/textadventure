@@ -30,7 +30,7 @@ def dialog(character: object, text: object, loops: object, animdelay: object) ->
             print("           |  (__)|")
             print("           |______|")
             print(" ")
-            print(" |",cname,":",text,"|")
+            print(" |",cname + ":",text,"|")
             time.sleep(animdelay)
             clear()
             print("            ______")
@@ -41,7 +41,7 @@ def dialog(character: object, text: object, loops: object, animdelay: object) ->
             print("           |  ___ |")
             print("           |______|")
             print(" ")
-            print(" |",cname,":",text,"|")
+            print(" |",cname + ":",text,"|")
             time.sleep(animdelay)
         if character == "masked":
             clear()
@@ -54,7 +54,7 @@ def dialog(character: object, text: object, loops: object, animdelay: object) ->
             print("         \_____/")
             print(" ")
             print(" ")
-            print(" |",enemyname,":",text,"|")
+            print(" |",enemyname + ":",text,"|")
             time.sleep(animdelay)
             clear()
             print(" ")
@@ -66,7 +66,7 @@ def dialog(character: object, text: object, loops: object, animdelay: object) ->
             print("        \ ____  /")
             print("         \_____/")
             print(" ")
-            print(" |",enemyname,":",text,"|")
+            print(" |",enemyname + ":",text,"|")
             time.sleep(animdelay)
     print("(press key)")
     waitforkey()
@@ -76,13 +76,13 @@ def question(prompt):
     clear()
     return input(prompt)
 
-def yesno(inputyn)
+def yesno(inputyn):
     if inputyn.lower() in ["yes", "y", "yay"]:
         return "y"
     else:
         return "n"
 cname = question("what do you want to name your detective? ")
-print("you are detective", cname, "ready to solve crimes and stuff")
+print("you are detective", cname + "ready to solve crimes and stuff")
 waitforkey()
 dialog("detective", "oh boy i sure love being a detective", 4, 0.2)
 enemyname = question("a masked stranger come up to you. What is his name?")
