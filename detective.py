@@ -2,8 +2,11 @@ import time
 import msvcrt
 import random
 from os import system, name
+
+
 def waitforkey():
     msvcrt.getch()
+
 
 def clear():
     # for windows
@@ -69,12 +72,20 @@ def dialog(character: object, text: object, loops: object, animdelay: object) ->
     waitforkey()
 
 
-cname = input("what do you want to name your detective? ")
+def question(prompt):
+    clear()
+    return input(prompt)
+
+def yesno(inputyn)
+    if inputyn.lower() in ["yes", "y", "yay"]:
+        return "y"
+    else:
+        return "n"
+cname = question("what do you want to name your detective? ")
 print("you are detective", cname, "ready to solve crimes and stuff")
 waitforkey()
 dialog("detective", "oh boy i sure love being a detective", 4, 0.2)
-clear()
-enemyname = input("a masked stranger come up to you. What is his name?")
+enemyname = question("a masked stranger come up to you. What is his name?")
 dialog("masked", "yo whats up mr detective man i need some detective crap done for me my dude", 5, 0.25)
 dialog("detective", "oh man oh jeez ok sure what will i get in return", 6, 0.15)
 dialog("masked", "you will get a magical artifact i totally didn't imbue with a curse", 5, 0.25)

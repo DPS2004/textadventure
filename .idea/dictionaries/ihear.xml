@@ -3,6 +3,8 @@
     <words>
       <w>animdelay</w>
       <w>enemyname</w>
+      <w>inputyn</w>
+      <w>waitforkey</w>
     </words>
   </dictionary>
 </component>
