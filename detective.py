@@ -6,17 +6,15 @@ from os import system, name
 
 
 def findline(linenum):
-    with open("savefile.sav", "r") as f:
+    with open("savefile.sav", "r") as file:
         for _ in range(linenum):
-            return f.readline()
+            line = file.readline()
+    return line
 
 
-def saveall(sname, senemyname, sdescision1, sprogress):
+def saveall(sname, senemyname, scheckpoint,):
     file = open("savefile.sav", "w")
-    file.write(sname)
-    file.write(senemyname)
-    file.write(sdescision1)
-    file.write(sprogress)
+    file.writelines((line + '\n' for line in [sname, senemyname, scheckpoint]))
     file.close()
 
 
@@ -103,16 +101,20 @@ def yesno(inputyn):
 if yesno(question("Welcome to detective game! would you like to load a saved game?")) == "y":
     if os.path.isfile("./savefile.sav"):
         cname = findline(1)
+        print(findline(1))
         enemyname = findline(2)
+        print(findline(2))
         checkpoint = findline(3)
+        print(findline(3))
+        waitforkey()
     else:
         print("No save file found :(")
         cname = question("what do you want to name your detective? ")
-        checkpoint = 0
+        checkpoint = "zero"
 else:
     cname = question("what do you want to name your detective? ")
-    checkpoint = 0
-if checkpoint == 0:
+    checkpoint = "zero"
+if checkpoint == "zero":
     print("you are detective", cname + ", ready to solve crimes and stuff")
     waitforkey()
     dialog("detective", "oh boy i sure love being a detective", 4, 0.2)
@@ -121,8 +123,9 @@ if checkpoint == 0:
     dialog("detective", "oh man oh jeez ok sure what will i get in return", 6, 0.15)
     dialog("masked", "you will get a magical artifact i totally didn't imbue with a curse", 5, 0.25)
     dialog("detective", "seems legit", 2, 0.2)
-    checkpoint = 1
-if checkpoint == 1
+    checkpoint = "one"
+    saveall(cname,enemyname,checkpoint)
+if checkpoint == "one":
     dialog("masked", "someone broke in to my house. who the heck did it?", 5, 0.25)
     dialog("detective", "who are the suspects?", 3, 0.15)
     dialog("masked", "Casey, who is my dog, Mrs. Greene, who is my cranky old neighbor, and Carson, who is my ex best friend", 12, 0.25)
@@ -130,11 +133,12 @@ if checkpoint == 1
     dialog("masked", "he can be a bit of a jerk, i wouldn't put it past him", 3, 0.25)
     if yesno(question("take up the case? ")) == "y":
         dialog("detective", "ok, take me to the scene of the crime.", 4, 0.2)
-        checkpoint = 2
+        checkpoint = "two"
     else:
         dialog("detective", "dude, you are crazy, im not doing this", 4, 0.25)
         dialog("masked", "but don't you want to get that magical artifact??", 4, 0.35)
         dialog("detective", "...yes", 1, 1)
         dialog("masked", "then it it is settled!", 4, 0.2)
         dialog("masked", "to the crime scene!!", 4, 0.2)
-        checkpoint = 2
+        checkpoint = "two"
+    saveall(cname, enemyname, checkpoint)
