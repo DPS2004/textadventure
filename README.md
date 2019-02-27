@@ -9,7 +9,9 @@ Cool.
 If you want to modify stuff, here is some things you should know:
 
 I am using python 3.x, not 2.x
+
 I am using Pycharm
+
 I am a sloppy coder.
 
 
