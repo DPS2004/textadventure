@@ -81,8 +81,10 @@ def yesno(inputyn):
         return "y"
     else:
         return "n"
+
+
 cname = question("what do you want to name your detective? ")
-print("you are detective", cname + "ready to solve crimes and stuff")
+print("you are detective", cname + ", ready to solve crimes and stuff")
 waitforkey()
 dialog("detective", "oh boy i sure love being a detective", 4, 0.2)
 enemyname = question("a masked stranger come up to you. What is his name?")
@@ -93,4 +95,9 @@ dialog("detective", "seems legit", 2, 0.2)
 dialog("masked", "someone broke in to my house. who the heck did it?", 5, 0.25)
 dialog("detective", "who are the suspects?", 3, 0.15)
 dialog("masked", "Casey, who is my dog, Mrs. Greene, who is my cranky old neighbor, and Carson, who is my ex best friend", 12, 0.25)
-dialog("detective", "cool beans", 2, 0.2)
+dialog("detective", "wait hold up why is your dog in the lineup?", 2, 0.2)
+dialog("masked", "he can be a bit of a jerk, i wouldn't put it past him", 3, 0.25)
+if yesno(question("take up the case? ")) == "y":
+    dialog("detective", "ok, take me to the scene of the crime.", 4, 0.2)
+else:
+    dialog("detective", "dude, you are crazy, im not doing this", 4, 0.25)
