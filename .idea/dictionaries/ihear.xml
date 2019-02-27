@@ -4,6 +4,12 @@
       <w>animdelay</w>
       <w>enemyname</w>
       <w>inputyn</w>
+      <w>saveall</w>
+      <w>savefile</w>
+      <w>sdescision</w>
+      <w>senemyname</w>
+      <w>sname</w>
+      <w>sprogress</w>
       <w>waitforkey</w>
     </words>
   </dictionary>

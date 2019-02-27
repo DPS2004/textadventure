@@ -4,6 +4,15 @@ import random
 from os import system, name
 
 
+def saveall(sname, senemyname, sdescision1, sprogress):
+    file = open("savefile.sav", "w")
+    file.write(sname)
+    file.write(senemyname)
+    file.write(sdescision1)
+    file.write(sprogress)
+    file.close()
+
+
 def waitforkey():
     msvcrt.getch()
 
@@ -75,6 +84,7 @@ def dialog(character: object, text: object, loops: object, animdelay: object) ->
 def question(prompt):
     clear()
     return input(prompt)
+
 
 def yesno(inputyn):
     if inputyn.lower() in ["yes", "y", "yay"]:
