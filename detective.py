@@ -4,6 +4,13 @@ import random
 from os import system, name
 
 
+def findline(linenum):
+    with open("test.txt", "r") as f:
+        for _ in range(linenum):
+            return f.readline()
+
+
+
 def saveall(sname, senemyname, sdescision1, sprogress):
     file = open("savefile.sav", "w")
     file.write(sname)
@@ -11,6 +18,7 @@ def saveall(sname, senemyname, sdescision1, sprogress):
     file.write(sdescision1)
     file.write(sprogress)
     file.close()
+
 
 
 def waitforkey():
@@ -92,6 +100,8 @@ def yesno(inputyn):
     else:
         return "n"
 
+if yesno(question("Welcome to detective game! would you like to load a saved game?")) == "y":
+    print("sorry, no")
 
 cname = question("what do you want to name your detective? ")
 print("you are detective", cname + ", ready to solve crimes and stuff")
@@ -111,3 +121,4 @@ if yesno(question("take up the case? ")) == "y":
     dialog("detective", "ok, take me to the scene of the crime.", 4, 0.2)
 else:
     dialog("detective", "dude, you are crazy, im not doing this", 4, 0.25)
+
