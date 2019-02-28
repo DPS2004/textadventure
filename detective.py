@@ -4,8 +4,11 @@ import random
 import os
 from os import system, name
 
-
-
+def printtxt(txtfile):
+    file = open(txtfile, 'r')
+    file_contents = file.read()
+    print(file_contents)
+    file.close()
 
 def findline(linenum):
     with open("savefile.sav", "r") as file:
@@ -99,7 +102,7 @@ def yesno(inputyn):
     else:
         return "n"
 
-
+printtxt("bustedhouse.txt")
 if yesno(question("Welcome to detective game! would you like to load a saved game?")) == "y":
     if os.path.isfile("./savefile.sav"):
         cname = findline(1)
