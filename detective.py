@@ -4,11 +4,19 @@ import random
 import os
 from os import system, name
 
+
+def investlist(showlist):
+    if investinput == "list":
+        print(showlist)
+        investinput == question("")
+
+
 def printtxt(txtfile):
     file = open(txtfile, 'r')
     file_contents = file.read()
     print(file_contents)
     file.close()
+
 
 def findline(linenum):
     with open("savefile.sav", "r") as file:
@@ -122,4 +130,14 @@ if checkpoint == "one":
         dialog("masked", "to the crime scene!!", 4, 0.2)
         checkpoint = "two"
     saveall(cname, enemyname, checkpoint)
+if checkpoint == "two":
+    printtxt("ascii/howtoinvestigate.txt")
+    waitforkey()
+    while 0==0:
+        clear()
+        printtxt("ascii/bustedhouse")
+        investinput = question("")
+        investlist("left shrub, right shrub, door, roof, mailbox")
+
+
 

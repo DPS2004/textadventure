@@ -2,16 +2,24 @@
   <dictionary name="ihear">
     <words>
       <w>animdelay</w>
+      <w>bustedhouse</w>
       <w>enemyname</w>
       <w>findline</w>
+      <w>howtoinvestigate</w>
       <w>inputyn</w>
+      <w>investinput</w>
+      <w>investlist</w>
       <w>linenum</w>
+      <w>printtxt</w>
       <w>saveall</w>
       <w>savefile</w>
+      <w>scheckpoint</w>
       <w>sdescision</w>
       <w>senemyname</w>
+      <w>showlist</w>
       <w>sname</w>
       <w>sprogress</w>
+      <w>txtfile</w>
       <w>waitforkey</w>
     </words>
   </dictionary>

@@ -1,0 +1,7 @@
+**************************************************** 
+*          INVESTIGATING A CRIME SCENE             *
+* To zoom in to, walk through, or otherwise use an *
+*  object, type its name in. To see a list of all  *
+*         objects in a scene, type list.           *
+*        Type back to go back one screen.          *
+****************************************************
