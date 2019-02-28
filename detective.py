@@ -41,49 +41,23 @@ def dialog(character: object, text: object, loops: object, animdelay: object) ->
     for x in range(loops):
         if character == "detective":
             clear()
-            print("            ______")
-            print("        ___/______\___")
-            print("           |      |")
-            print("           |  O  O|")
-            print("           |   __>|")
-            print("           |  (__)|")
-            print("           |______|")
+            printtxt("ascii/detective1.txt")
             print(" ")
             print(" |",cname + ":",text,"|")
             time.sleep(animdelay)
             clear()
-            print("            ______")
-            print("        ___/______\___")
-            print("           |      |")
-            print("           |  O  O|")
-            print("           |     >|")
-            print("           |  ___ |")
-            print("           |______|")
+            printtxt("ascii/detective2.txt")
             print(" ")
             print(" |",cname + ":",text,"|")
             time.sleep(animdelay)
         if character == "masked":
             clear()
-            print("          _____   ")
-            print("         /     \ ")
-            print("        / _  _  \ ")
-            print("       | |_|| |  |")
-            print("       |    |_|  |")
-            print("        \ ____  /")
-            print("         \_____/")
-            print(" ")
+            printtxt("ascii/masked1.txt")
             print(" ")
             print(" |",enemyname + ":",text,"|")
             time.sleep(animdelay)
             clear()
-            print(" ")
-            print("          _____   ")
-            print("         /     \ ")
-            print("        / _  _  \ ")
-            print("       | |_|| |  |")
-            print("       |    |_|  |")
-            print("        \ ____  /")
-            print("         \_____/")
+            printtxt("ascii/masked2.txt")
             print(" ")
             print(" |",enemyname + ":",text,"|")
             time.sleep(animdelay)
@@ -102,7 +76,8 @@ def yesno(inputyn):
     else:
         return "n"
 
-printtxt("bustedhouse.txt")
+
+
 if yesno(question("Welcome to detective game! would you like to load a saved game?")) == "y":
     if os.path.isfile("./savefile.sav"):
         cname = findline(1)
