@@ -106,7 +106,7 @@ if yesno(question("Welcome to detective game! would you like to load a saved gam
         print(findline(2))
         checkpoint = findline(3)
         print(findline(3))
-        waitforkey()
+
     else:
         print("No save file found :(")
         cname = question("what do you want to name your detective? ")
