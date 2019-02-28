@@ -17,6 +17,8 @@ I am a sloppy coder.
 
 Some functions you should know:
 
+printtxt(path to text file): prints out an entire text file. Does not clear the screen.
+
 findline(line number): Finds said line in savefile.sav (if it exists)
 
 saveall(player name, masked man name, most recent checkpoint): Saves the game. Just input the variables right and you should be A-OK.
