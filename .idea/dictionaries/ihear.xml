@@ -18,10 +18,12 @@
       <w>senemyname</w>
       <w>showlist</w>
       <w>sname</w>
+      <w>spritename</w>
       <w>sprogress</w>
       <w>strin</w>
       <w>txtfile</w>
       <w>waitforkey</w>
+      <w>yeet</w>
     </words>
   </dictionary>
 </component>

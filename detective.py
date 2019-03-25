@@ -53,7 +53,7 @@ def clear():
         _ = system('clear')
 
 
-def dialog(spritename: object, text: object, loops: object, animdelay: object) -> object:
+def dialog(spritename, text, loops, animdelay):
     for x in range(loops):
         clear()
         printtxt("ascii/"+spritename+"1.txt")
@@ -75,7 +75,7 @@ def question(prompt):
 
 
 def yesno(inputyn):
-    if inputyn.lower() in ["yes", "y", "yay", "yep", "sure", "yeah"]:
+    if inputyn.lower() in ["yes", "y", "yay", "yep", "sure", "yeah", "yeet", "mhm", "positively"]:
         return "y"
     else:
         return "n"
