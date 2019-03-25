@@ -6,11 +6,12 @@ from os import system, name
 
 
 def s2n(strin):
-    return(int(strin))
+    return int(strin)
 
 
 def n2s(numb):
-    return(str(numb))
+    return str(numb)
+
 
 def investlist(showlist):
     if investinput == "list":
@@ -52,30 +53,18 @@ def clear():
         _ = system('clear')
 
 
-def dialog(character: object, text: object, loops: object, animdelay: object) -> object:
+def dialog(spritename: object, text: object, loops: object, animdelay: object) -> object:
     for x in range(loops):
-        if character == "detective":
-            clear()
-            printtxt("ascii/detective1.txt")
-            print(" ")
-            print(" |",cname + ":",text,"|")
-            time.sleep(animdelay)
-            clear()
-            printtxt("ascii/detective2.txt")
-            print(" ")
-            print(" |",cname + ":",text,"|")
-            time.sleep(animdelay)
-        if character == "masked":
-            clear()
-            printtxt("ascii/masked1.txt")
-            print(" ")
-            print(" |",enemyname + ":",text,"|")
-            time.sleep(animdelay)
-            clear()
-            printtxt("ascii/masked2.txt")
-            print(" ")
-            print(" |",enemyname + ":",text,"|")
-            time.sleep(animdelay)
+        clear()
+        printtxt("ascii/"+spritename+"1.txt")
+        print(" ")
+        print(" |", cname + ":", text, "|")
+        time.sleep(animdelay)
+        clear()
+        printtxt("ascii/"+spritename+"2.txt")
+        print(" ")
+        print(" |", cname + ":", text, "|")
+        time.sleep(animdelay)
     print("(press key)")
     waitforkey()
 
@@ -90,7 +79,6 @@ def yesno(inputyn):
         return "y"
     else:
         return "n"
-
 
 
 if yesno(question("Welcome to detective game! would you like to load a saved game?")) == "y":

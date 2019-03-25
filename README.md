@@ -14,8 +14,13 @@ I am using Pycharm
 
 I am a sloppy coder.
 
+If you want to use debug mode, type in debug as your name on a new file.
 
 Some functions you should know:
+
+s2n(string): returns a integer version of a string
+
+n2s(number): returns a string version of an integer
 
 printtxt(path to text file): prints out an entire text file. Does not clear the screen.
 
@@ -27,7 +32,7 @@ waitforkey(): My hacky way of waiting for a keypress.
 
 clear(): My hacky way of clearing the screen. Found it on a blog somewhere.
 
-dialog(character name, text to display, number of times the animation loops, time per frame): Abandon all hope ye who enter here. Valid characters are currently: "detective" and "masked". More coming soon. Time per frame is in seconds, if unsure set it to ~0.2 to make it be a medium speed.
+dialog(sprite set in /ascii/, text to display, number of times the animation loops, time per frame):Time per frame is in seconds, if unsure set it to ~0.2 to make it be a medium speed.
 
 question(question to ask): Clears the screen, asks a question, and returns it.
 
