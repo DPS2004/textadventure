@@ -40,7 +40,10 @@ def saveall(sname, shatname, scheckpoint,):
 
 
 def waitforkey():
-    msvcrt.getch()
+    if consoleinput == "y":
+        input()
+    else:
+        msvcrt.getch()
 
 
 def clear():
@@ -97,6 +100,7 @@ else:
         cname = "Detective"
         hatname = "Top hat man"
         print("debug mode activated!")
+        consoleinput = yesno(question("use python console input?"))
         checkpoint = s2n(question("warp to what checkpoint?"))
     else:
         checkpoint = 0
@@ -121,18 +125,20 @@ if checkpoint == 0:
 if checkpoint == 1:
     dialog("tophatyell", hatname, "Someone has broked in to house. Who the heck did?", 5, 0.25)
     dialog("detective", cname, "who are the suspects?", 3, 0.15)
-    dialog("tophatyell", hatname, "Casey, who is my dog, Mrs. Greene, who is meanie old neighbor, and Carson, who is used to be best friend", 12, 0.25)
+    dialog("casey", hatname, "Casey, who is my dog...", 3, 0.25)
+    dialog("greene", hatname, "Mrs. Greene, who is meanie old neighbor...", 4, 0.25)
+    dialog("carson", hatname, "and Carson, who is used to be best friend", 5, 0.25)
     dialog("detectiveangry", cname, "wait hold up why is your dog in the lineup?", 2, 0.2)
-    dialog("tophatyell", hatname, "He can be jerk, would not put past him", 3, 0.25)
+    dialog("casey", hatname, "He can be jerk, would not put past him", 3, 0.25)
     if yesno(question("take up the case? ")) == "y":
-        dialog("detective", "ok, take me to the scene of the crime.", 4, 0.2)
+        dialog("detective", "Ok, take me to the scene of the crime.", 4, 0.2)
         checkpoint = 2
     else:
         dialog("detectiveangry", cname, "You are clearly insane. I am not doing this.", 7, 0.25)
         dialog("tophatyell", hatname, "You have other case to do??", 4, 0.35)
         dialog("detective", cname, "...no", 1, 1)
         dialog("tophatyell", "then it it is settled!", 4, 0.2)
-        dialog("tophatyell", "to the crime scene!!", 4, 0.2)
+        dialog("tophatyell", "to crime scene!!", 3, 0.2)
         checkpoint = 2
     saveall(cname, hatname, checkpoint)
 if checkpoint == 2:
