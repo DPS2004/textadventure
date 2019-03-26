@@ -2,7 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1064d81c-8410-4a83-8e25-a35ca600806d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/ihear.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/ihear.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascii/bustedhouse.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascii/casey1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascii/casey2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascii/detective1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascii/detective2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascii/detectiveangry1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascii/detectiveangry2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascii/detectivefull.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascii/dollarino.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascii/greene1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascii/greene2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascii/howtoinvestigate.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascii/leftshrub.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascii/masked1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascii/masked2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascii/rightshrub.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascii/tophatmutter1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascii/tophatmutter2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascii/tophatyell1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ascii/tophatyell2.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/detective.py" beforeDir="false" afterPath="$PROJECT_DIR$/detective.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,8 +35,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/detective.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="272">
+              <caret line="78" column="22" lean-forward="true" selection-start-line="78" selection-start-column="22" selection-end-line="78" selection-end-column="22" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -199,8 +218,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/detective.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="272">
+          <caret line="78" column="22" lean-forward="true" selection-start-line="78" selection-start-column="22" selection-end-line="78" selection-end-column="22" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>

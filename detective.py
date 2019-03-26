@@ -56,16 +56,18 @@ def clear():
     else:
         _ = system('clear')
 
-
 def dialog(spritename, displayname, text, loops, animdelay):
+    if fasttext == "y":
+        loops = 1
+        animdelay = 0.1
     for x in range(loops):
         clear()
-        printtxt("ascii/"+spritename+"1.txt")
+        printtxt("ascii/"+spritename+"/"+spritename+"1.txt")
         print(" ")
         print(" |", displayname + ":", text, "|")
         time.sleep(animdelay)
         clear()
-        printtxt("ascii/"+spritename+"2.txt")
+        printtxt("ascii/"+spritename+"/"+spritename+"2.txt")
         print(" ")
         print(" |", displayname + ":", text, "|")
         time.sleep(animdelay)
@@ -73,8 +75,9 @@ def dialog(spritename, displayname, text, loops, animdelay):
     waitforkey()
 
 
-def question(prompt):
-    clear()
+def question(prompt, clearyn):
+    if clearyn == "y":
+        clear()
     return input(prompt)
 
 
@@ -85,7 +88,7 @@ def yesno(inputyn):
         return "n"
 
 
-if yesno(question("Welcome to detective game! would you like to load a saved game?")) == "y":
+if yesno(question("Welcome to detective game! would you like to load a saved game? ", "y")) == "y":
     if os.path.isfile("./savefile.sav"):
         cname = findline(1)
         hatname = findline(2)
@@ -93,16 +96,18 @@ if yesno(question("Welcome to detective game! would you like to load a saved gam
         consoleinput = findline(4)
     else:
         print("No save file found :(")
-        cname = question("what do you want to name your detective? ")
+        cname = question("what do you want to name your detective? ", "n")
         checkpoint = 0
 else:
-    cname = question("what do you want to name your detective? ")
+    cname = question("what do you want to name your detective? ", "y")
     if cname == "debug":
         cname = "Detective"
         hatname = "Top hat man"
         print("debug mode activated!")
-        consoleinput = yesno(question("use python console input?"))
-        checkpoint = s2n(question("warp to what checkpoint?"))
+        consoleinput = yesno(question("use python console input? ", "n"))
+        checkpoint = s2n(question("warp to what checkpoint? ", "n"))
+        fasttext = yesno(question("activate fast text mode? ", "n"))
+        clear()
     else:
         checkpoint = 0
         consoleinput = 0
@@ -110,7 +115,7 @@ if checkpoint == 0:
     print("you are detective", cname + ", ready to solve crimes and stuff")
     waitforkey()
     dialog("detective", cname, "Time to open up the office.", 4, 0.2)
-    hatname = question("The door opens, and a man with a strange hat comes up to you. What is his name?")
+    hatname = question("The door opens, and a man with a strange hat comes up to you. What is his name? ", "y")
     dialog("tophatmutter", hatname, "*mutters something about a detective", 5, 0.25)
     dialog("detective", cname, "Can you speak up please?", 5, 0.15)
     clear()
@@ -138,12 +143,14 @@ if checkpoint == 1:
     clear()
     print("He hands you a piece of paper")
     waitforkey()
-    printtxt("ascii/dollarino.txt")
+    printtxt("ascii/items/dollarino.txt")
     waitforkey()
+    clear()
     print("You observe that contrary to what it says, it is not a real form of currency.")
     waitforkey()
-    if yesno(question("Take up the case? ")) == "y":
+    if yesno(question("Take up the case? ", "y")) == "y":
         dialog("detective", "Ok, take me to the scene of the crime.", 4, 0.2)
+        dialog("tophatyell", "Huzzah! The other detectiveman would not take case. Thank you much!", 6, 0.16)
         checkpoint = 2
     else:
         dialog("detectiveangry", cname, "You are clearly insane. I am not doing this.", 7, 0.25)
