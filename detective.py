@@ -5,7 +5,7 @@ import os
 from os import system, name
 investinput = "nothing"
 consoleinput = 0
-
+fasttext = "n"
 def s2n(strin):
     return int(strin)
 
@@ -20,7 +20,6 @@ def investlist(showlist, linput):
         return question("", "n")
     else:
         return linput
-
 
 
 def printtxt(txtfile):
@@ -59,6 +58,7 @@ def clear():
     else:
         _ = system('clear')
 
+
 def dialog(spritename, displayname, text, loops, animdelay):
     if fasttext == "y":
         loops = 1
@@ -91,6 +91,8 @@ def yesno(inputyn):
         return "n"
 
 
+#main script
+
 if yesno(question("Welcome to detective game! would you like to load a saved game? ", "y")) == "y":
     if os.path.isfile("./savefile.sav"):
         cname = findline(1)
@@ -101,6 +103,8 @@ if yesno(question("Welcome to detective game! would you like to load a saved gam
         print("No save file found :(")
         cname = question("what do you want to name your detective? ", "n")
         checkpoint = 0
+        consoleinput = "n"
+        fasttext = "n"
 else:
     cname = question("what do you want to name your detective? ", "y")
     if cname == "debug":
@@ -113,7 +117,8 @@ else:
         clear()
     else:
         checkpoint = 0
-        consoleinput = 0
+        consoleinput = "n"
+        fasttext == "n"
 if checkpoint == 0:
     print("you are detective", cname + ", ready to solve crimes and stuff")
     waitforkey()
@@ -159,7 +164,7 @@ if checkpoint == 1:
         dialog("detectiveangry", cname, "You are clearly insane. I am not doing this.", 7, 0.25)
         dialog("tophatyell", hatname, "You have other case to do??", 4, 0.35)
         dialog("detective", cname, "...no", 1, 1)
-        dialog("tophatyell", "then it it is settled!", 4, 0.2)
+        dialog("tophatyell", "then is settled!", 4, 0.18)
         dialog("tophatyell", "to crime scene!!", 3, 0.2)
         checkpoint = 2
     saveall(cname, hatname, checkpoint, consoleinput)
@@ -169,24 +174,82 @@ if checkpoint == 2:
     while 0==0:
         clear()
         printtxt("ascii/locations/bustedhouse/bustedhouse.txt")
+        print("You see a house with a busted window in front of you.")
         investinput = question("", "n")
-        investinput = investlist("left shrub, right shrub, left window, right window, door, roof, mailbox", investinput)
+        investinput = investlist("left shrub, right shrub, left window, right window, door,, mailbox", investinput)
         if investinput == "list":
             print("you already have a list open!")
             waitforkey()
         if investinput == "left shrub":
             while 0==0:
                 clear()
-                printtxt("ascii/locations/bustedhouse/leftshrub/leftshrub.txt")
+                printtxt("ascii/locations/bustedhouse/leftshrub/leftsrhub.txt")
+                print("You are looking at a shrub on the left side of the house. ")
                 investinput = question("", "n")
+                investinput = investlist("shards of glass, broken branch", investinput)
+                if investinput == "list":
+                    print("you already have a list open!")
+                    waitforkey()
+
                 if investinput == "back":
                     break
         if investinput == "right shrub":
             while 0==0:
                 clear()
                 printtxt("ascii/locations/bustedhouse/rightshrub/rightshrub.txt")
-
-
-
-
-
+                print("You are looking at a shrub on the right side of the house")
+                investinput = question("", "n")
+                investinput = investlist("Nothing of note", investinput)
+                if investinput == "list":
+                    print("you already have a list open!")
+                    waitforkey()
+                if investinput == "back":
+                    break
+        if investinput == "right window":
+            while 0==0:
+                clear()
+                printtxt("ascii/locations/bustedhouse/rightwindow/rightwindow.txt")
+                print("You are looking at a window on the right side of the house.")
+                investinput = question("", "n")
+                investinput = investlist("Curtain, bird feces", investinput)
+                if investinput == "list":
+                    print("you already have a list open!")
+                    waitforkey()
+                if investinput == "bird feces":
+                    while 0 == 0:
+                        clear()
+                        printtxt("ascii/locations/bustedhouse/rightwindow/birdfeces/birdfeces.txt")
+                        print("You are looking at bird feces in the form of a white stain on the windowsill.")
+                        investinput = question("", "n")
+                        investinput = investlist("Nothing of note", investinput)
+                        if investinput == "list":
+                            print("you already have a list open!")
+                            waitforkey()
+                        if investinput == "back":
+                            break
+                if investinput == "curtain":
+                    while 0 == 0:
+                        clear()
+                        printtxt("ascii/locations/bustedhouse/rightwindow/curtain/curtain.txt")
+                        print("You are looking at the curtain that is in the window. It has many small holes in it.")
+                        investinput = question("", "n")
+                        investinput = investlist("Holes", investinput)
+                        if investinput == "list":
+                            print("you already have a list open!")
+                            waitforkey()
+                        if investinput == "holes":
+                            while 0 == 0:
+                                clear()
+                                printtxt("ascii/locations/bustedhouse/rightwindow/curtain/holes/holes.txt")
+                                print("upon closer inpection, the holes are bite marks.")
+                                investinput = question("", "n")
+                                investinput = investlist("Nothing of note", investinput)
+                                if investinput == "list":
+                                    print("you already have a list open!")
+                                    waitforkey()
+                                if investinput == "back":
+                                    break
+                        if investinput == "back":
+                            break
+                if investinput == "back":
+                    break
