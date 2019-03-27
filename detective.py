@@ -3,7 +3,7 @@ import msvcrt
 import random
 import os
 from os import system, name
-
+investinput = "nothing"
 consoleinput = 0
 
 def s2n(strin):
@@ -14,10 +14,13 @@ def n2s(numb):
     return str(numb)
 
 
-def investlist(showlist):
-    if investinput == "list":
+def investlist(showlist, linput):
+    if linput == "list":
         print(showlist)
-        investinput == question("")
+        return question("", "n")
+    else:
+        return linput
+
 
 
 def printtxt(txtfile):
@@ -161,21 +164,27 @@ if checkpoint == 1:
         checkpoint = 2
     saveall(cname, hatname, checkpoint, consoleinput)
 if checkpoint == 2:
-    printtxt("ascii/howtoinvestigate.txt")
+    printtxt("ascii/pop_ups/howtoinvestigate.txt")
     waitforkey()
     while 0==0:
         clear()
-        printtxt("ascii/bustedhouse.txt")
-        investinput = question("")
-        investlist("left shrub, right shrub, left window, right window, door, roof, mailbox")
+        printtxt("ascii/locations/bustedhouse/bustedhouse.txt")
+        investinput = question("", "n")
+        investinput = investlist("left shrub, right shrub, left window, right window, door, roof, mailbox", investinput)
+        if investinput == "list":
+            print("you already have a list open!")
+            waitforkey()
         if investinput == "left shrub":
             while 0==0:
                 clear()
-                printtxt("ascii/leftshrub.txt")
+                printtxt("ascii/locations/bustedhouse/leftshrub/leftshrub.txt")
+                investinput = question("", "n")
+                if investinput == "back":
+                    break
         if investinput == "right shrub":
             while 0==0:
                 clear()
-                printtxt("ascii/rightshrub.txt")
+                printtxt("ascii/locations/bustedhouse/rightshrub/rightshrub.txt")
 
 
 
